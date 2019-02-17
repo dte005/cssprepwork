@@ -20,7 +20,7 @@ body{
   font-family: 'Staatliches', cursive;
   background-color: dodgerblue;
   border: 1px solid dodgerblue;
-  min-height: 500px;
+  min-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,7 +113,8 @@ body{
 .navbar-middle .navbar-middle-left .navbar-middle-item a{
   font-family: Helvetica;
   font-size: 25px;
-  padding: 30px;
+  padding:0px;
+  margin-left: 30px;
   color: white;
   opacity: 0.5;
 }
@@ -132,15 +133,18 @@ body{
 
 
 /*Efeito do nav-menu*/
-.navbar-middle .navbar-middle-left .navbar-middle-item-active a{
+.navbar-middle .navbar-middle-left .navbar-middle-item-active{
   background-color: orange;
-  border-top-right-radius:50px;
-  border-bottom-right-radius:50px;
-  padding: 30px;
+  width: 80px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 25px;
-  color:black;
-  z-index: 10;
-  text-decoration: none;
+}
+
+.navbar-middle-item-active i{
+  color: black;
 }
 
 
