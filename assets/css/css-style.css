@@ -32,6 +32,7 @@ body{
   margin:0;
   padding:0;
   font-size:150px;
+  color:orange;
 }
 
 .banner p{
@@ -85,37 +86,59 @@ body{
   justify-content: space-around;
 }
 
-.topnav {
-  background-color: dimgray;
-  overflow: hidden;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav p{
-  float:right;
+/*desenvolvimento navbar-middle*/
+.navbar-middle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
   color:white;
-  margin-right: 10px;
+  background-color: dimgray;
 }
 
-.topnav a:hover {
-  background-color: aliceblue;
-  color: black;
+.navbar-middle .navbar-middle-left{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.topnav a.active {
-  background-color: aliceblue;
-  width: 80px;
+.navbar-middle .navbar-middle-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navbar-middle .navbar-middle-left a{
+  font-family: Helvetica;
+  font-size: 20px;
+  padding: 30px;
   color: white;
 }
 
+.navbar-middle .navbar-middle-left a:hover{
+  color: orange;
+  text-decoration: none;
+}
+
+.navbar-middle .navbar-middle-right a{
+  font-family: Helvetica;
+  font-size: 20px;
+  padding: 30px;
+}
+
+.navbar-middle .navbar-middle-left .navbar-middle-item-active a{
+  background-color: orange;
+  border-top-right-radius:20px;
+  border-bottom-right-radius:20px;
+  font-size: 25px;
+  color:black;
+  text-decoration: none;
+}
+
+
+/*Desenvolvimento do footer*/
 .footer{
   display:flex;
   flex-direction: column;
