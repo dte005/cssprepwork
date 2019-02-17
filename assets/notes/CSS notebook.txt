@@ -1,0 +1,260 @@
+PREPWORK => 13/02/2019
+
+CSS => cascating style sheet
+
+**obs: &copy; realiza o efeito do C de corporate no footer
+           &mdash; insere uma linha de acordo com seu posicionamento no texto.
+
+inline style => modo de programar o CSS direto no documento HTML
+
+**linkando o arquivo CSS:
+
+<link type="text/css" href="./style.css" rel="stylesheet">
+
+type -> descreve o tipo de documento que est� sendo linkado
+href -> refer�ncia do caminho onde est� o arquivo CSS
+rel -> descreve o relacionamento estre o CSS e o HTML
+
+
+**Entendendo as TAGS do CSS
+****IMPORTANTISSIMO => os IDs sempre sobrescrevem as classes de estilos
+
+**tags em css s�o refer�ncias aos elementos do HTML.
+
+p{} => faz refer�ncia ao tag PARAGRAFO em html
+h1{} => faz refer�ncia ao H1 em HTML
+
+**Entendendo as Classes
+As classes sao usadas para decorarem os tag elements.
+Um tag pode receber mais de uma classe decorativa.
+
+.uppercase{
+text-transform: uppercase; => trasforma todo o contudo em que estiver no escopo da classe em mai�sculo.
+}
+
+as classes sao utilizadas para colocar estilo em uma quantidade maior que 1 de tags.
+
+**caso queiramos indexar a decora��o de forma �nica, precisamos utilizar o ID
+**especificidade => � o modo como o browser escolhe qual estilo ir� aplicar na p�gina:
+	Se for um tag element => ele tem baixa especificidade portanto pode ser sobreescrito
+	Se for uma classe => a especificidade aumenta e sbrescreve o tag element
+	Se for um ID => a especificidade chega ao m�ximo e sobrescreve todos os outros estilos
+A dica sera sempre tentar utilizar o elemento de menor especificidade toda vez.
+
+**Seletores em cadeia (Chaining Selectors)
+
+h1.special {
+
+}
+
+esse c�digo somente pega os tag elements H1 que possuem a classe .special.
+
+**Nested Elements
+<ul class='main-list'>
+  <li> ... </li>
+  <li> ... </li>
+  <li> ... </li>
+</ul>
+
+.main-list li {
+
+}
+
+O css est� pegando os li que s�o child da classe main-list
+
+** ! important (sem espa�o)
+a propriedade !important faz com que a regra seja efetuada independente de sua especificidade.
+est� propriedade retira a capacidade de manuten��o do c�digo CSS, pois for�a um valor sobre todas as outras especificidade.
+
+**Multiple sepectors
+Podemos resumir a programa��o atrav�s de shorcuts:
+
+Era:
+h1 {
+  font-family: Georgia;
+}
+
+.menu {
+  font-family: Georgia;
+}
+
+ficou:
+h1,
+.menu {
+  font-family: Georgia;
+}
+
+**CSS stucture
+
+Todos os exemlos até o momento são chamados de CSS declarations.
+propriedades:
+color => muda a cor da letra
+background-color =>muda a cor de fundo
+font-size => tamanho da letra
+font-weight => muda o estilo da letra
+font-family => muda o tipo de fonte
+opacity => muda a opacidade, ou transparencia
+
+
+**box model
+Cada elemento declarado no html está inserido em um box.
+Ao mudar a cor de fundo, podemos verificar que a cor de todo o box muda.
+
+propriedades:
+width => comprimento
+height => altura
+border => define borda como: 1px solid black => grossura tipo e cor
+border-radius => arredondamento das bordas
+padding => espacamento entre o conteudo e a borda.
+  padding-left, padding-right, padding-top, padding-bottom
+  padding: 5px 10px; => top e bottom = 5px e left e right = 10px
+  padding: 5px 6px 3px 8px => estamos definindo com precisao cada um dos paddings
+margin => espaçamento de fora.
+  margin-top, margin-bottom, margin-left, margin-right
+  margin: 3px 5px 4px 8px => especificando cada margin
+  margin: 3px 6px => para top e bottom=3px e left e right=6px
+  margin: 0 auto => ele esta setando o TOP e BOTTOM para 0 e o LEFT e RIGHT para centralizar dentro do DIV
+  porém é necessário setar um width para o elemento
+
+margin collapse => a margem horizontal (margin-left e right) ao serem setadas são atomaticamente somadas a distancia total do elementos.
+ex:
+#img-1{
+  margin-left: 10px;
+}
+#img-2{
+  margin-right: 10px;
+}
+O total de distancia entre os elementos na horizontal é de 20px;
+
+                => a margem vertical (margin-top e bottom), ao contrário da horizontal não se somam a distancia total e sim a maior que se prevalecerá
+ex:
+#img-1{
+  margin-bottom: 10px;
+}
+#img-2{
+  margin-top: 30px;
+}
+o total de distancia será de 30px, pois é o de maior valor;
+
+**Devido ao fato de o site ser visto em vários tipos de equipamentos
+min-width => determina o minimo de tamanho a ser atingido
+max-width => determina o máximo de tamanho a ser atingido
+
+min-height => determina o minimo de tamanho a ser atingido
+max-height => determina o máximo de tamanho a ser atingido
+
+**Overflow
+se o conteúdo ultrapassar o tamanho de um elemento, podemos utilizar o overflow e adicionar novas formas de visualização
+
+p {
+  overflow: scroll;
+}
+
+quanto o p ultrapassar os limites definidos de tamanho, será adiconado uma barra de scroll
+
+  ->scroll => adiciona a barra
+  ->hidden => esconde o conteúdo que ultrapassou
+  ->visible => será visualizado fora dos limites definidos
+
+**Resetando para o padrão
+Todos os browsers possuem uma folha de estilo (CSS) padrão para o usuário na ausência de uma externa. (user agent stylesheets.)
+*{
+  margin:0;
+  padding:0;
+}
+
+**Visibilidade
+propriedade que faz com que elementos fiquem invisiveis ou não para o usuário.
+  ->hidden
+  ->visible
+
+*****obs: Qual a diferença entre DISPLAY: NONE e VISIBILITY: hidden
+no DISPLAY o elemento é completamente retirado da página da WEB.
+no VISIBILITY o elemento não pode ser visto, porém seu espaço na página estará reservado e poderá ser notado pelo usuário.
+
+**Changing the Box model
+h1 {
+  border: 1px solid black;
+  height: 200px;
+  width: 300px;
+  padding: 10px;
+}
+
+infelizmente ao colocar a borda com expessura de 1px, o width de 300, height de 200 e padding de 10 irá alterar o tamanho do elemento,
+com isso o valor setado para tamanho e altura não irão corresponder ao valor real do elemento, que após essas propriedades terão o valor de 322 e 222.
+
+* {
+  box-sizing: border-box;
+}
+
+mudando o valor da propriedade box-sizing podemos ter certeza de que o tamanho do BOX será obedecido.
+
+border:1px | padding:10px | content:auto | padding:10px | border:10px
+           |--------------------200px-------------------|
+
+**Flow of elements
+Um browser irá ler um documento HTML da esquerda para direita e de cima para baixo. Isso se chama flow of elements.
+Basicamente essas propriedades são responsáveis pelo posicionamento dos elementos na tela:
+  ->position
+  ->DISPLAY
+  ->float
+  ->clear
+  ->z-index
+
+  **position => controla o posicionamento do elemento.
+      ->relative => relativa a sua posição no static. Possue 4 parametros de offsets
+        ->TOP
+        ->BOTTOM
+        ->LEFT
+        ->RIGHT
+      ->absolute => Quando um elemento está posicionado de forma absoluta, significa que os outros elementos agiram como se este elemento não existisse.
+      O elemento será posicionado relativo ao parent mais próximo.
+      ->static => default value. Não é necessário declarar, pois já está default
+      ->fixed => posiciona o elemento de maneira a acompanhar o SCROLL da página.
+
+  **Z-Index => Determina qual elemento fica acima do outro ao realizar o SCROLL.
+    Muito bom para fazer menus que ficam acima de tudo ao realizar o scroll.
+
+  **Display => propriedade que da ao elemento em se tornar um inline element.
+    ->inline => mantem o elemento em linha com o seus elementos vizinhos.
+    ->block => mantem o elemento fora da linha dos outros elementos vizinhos.
+    ->inline-block => podemos juntar as duas caracteristicas acima, assim podemos colocar inline com tamanhos específicos
+
+  **Float => Se quisermos jogar o elemento o mais longe possível a esquerda ou a direita
+    ->LEFT
+    ->RIGHT
+
+  **Clear => determina o comportamento dos elementos quando ficam amontoados ou sao puxados pela propriedade do proximo
+    ->LEFT
+    ->right
+    ->both
+    ->none
+
+**Sistema de cores
+as cores em CSS podem ser:
+  ->named
+  ->RGB
+  ->HSL => mix of hue, saturation, and lightness
+
+As cores podem afetar:
+-> foreground-color ou color
+-> background-color
+  **named colors
+    Existem no total de 147 named colors
+    para a cor com opacidade máxima se chama TRANSPARENT
+  **Hexadecimal                 -
+    ->#FFFFFF                   |__total de 256 * 256 * 256 cores possiveis
+  **RGB                         |
+    ->color: rgb(23, 45, 23);   -
+    Possuimos ainda o RGBA onde o A é a opacidade
+
+  **Hue, Saturation, and Lightness (HSL)
+  Bem perto de como os computadores apresentam as cores.
+
+    ->saturation => intensidade de pureza
+    ->lightness => o quão escura e clara é a cores
+    ->HSLA => o A é a opacidade
+
+**SASS
+São pré processadores para CSS os quais automatizam os comandos executados.
+Fazendo com que o Css não fique repetitivo.

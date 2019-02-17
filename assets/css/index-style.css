@@ -1,0 +1,95 @@
+.title h1{
+  color:white;
+  font-family: Helvetica;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  background-color: black;
+  opacity: 0.8;
+  margin: 0 auto;
+  max-width:600px;
+  min-width: 300px;
+}
+
+.geral{
+  position:relative;
+  top:75px;
+}
+
+.content-retangle{
+  display: inline-block;
+  width: 500px;
+  height: 500px;
+  margin-top: 100px;
+}
+
+.banner{
+  width:100%;
+  height: 500px;
+  margin:0 auto;
+  background-image: url("https://picsum.photos/1000/500?image=60");
+  background-size: cover;
+}
+
+.navbar{
+  font-size: 20px;
+  margin:0;
+  background-color: grey;
+  position:fixed;
+  width:100%;
+  z-index: 10;
+}
+
+.navbar ul{
+  margin-top:15px;
+}
+
+.navbar ul li{
+  display: inline;
+  margin:10px;
+  border: 1px solid white;
+  opacity: 0.8;
+  padding: 5px;
+  border-radius: 20px;
+  box-shadow: 2px 2px lightgrey;
+}
+
+.navbar ul li a{
+  color: white;
+  padding:5px;
+}
+
+.navbar ul li a:hover{
+  color: lightgrey;
+  text-decoration: none;
+}
+
+#banner-p1{
+  color: red;
+  width: 200px;
+  min-width: 100px;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  top:300px;
+  left:40px;
+  margin: 0 auto; /*coloca o p1 no centro do div*/
+}
+
+.banner .banner-inside p{
+  color:red;
+}
+
+.content{
+  background-color: white;
+  color:black;
+  text-align: center;
+}
+
+.footer{
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  background-color: grey;
+}

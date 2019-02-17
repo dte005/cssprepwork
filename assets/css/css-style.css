@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet');
+
+
+
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+body{
+  font-family: 'Raleway', sans-serif;
+  margin:0;
+  padding:0;
+  background-color:	aliceblue;
+}
+
+.banner{
+  color:white;
+  font-family: 'Staatliches', cursive;
+  background-color: dodgerblue;
+  border: 1px solid dodgerblue;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.banner h1{
+  margin:0;
+  padding:0;
+  font-size:150px;
+}
+
+.banner p{
+  margin:0;
+  padding:0;
+  font-size:40px;
+  opacity:0.6;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color:	aliceblue;
+}
+
+.content-box{
+  margin-top: 20px;
+  padding: 20px;
+  background-color:	aliceblue;
+}
+
+.content .content-box h3{
+  font-family: 'Lobster', cursive;
+}
+
+.content .content-box img{
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 2px 2px lightgrey;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+.content-box-rss{
+  width: 100%;
+  min-height: 550px;
+  padding: 50px;
+  background-color:	white;
+}
+
+.content-box-rss .content-cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.topnav {
+  background-color: dimgray;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav p{
+  float:right;
+  color:white;
+  margin-right: 10px;
+}
+
+.topnav a:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: aliceblue;
+  width: 80px;
+  color: white;
+}
+
+.footer{
+  background-color: dimgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  height: 200px;
+}
+
+.footer ul{
+  margin-right: 20px;
+}
+
+.footer ul li{
+  display: inline;
+}
+
+.footer ul li a{
+  color:white;
+  font-size: 25px;
+}
+
+.footer p{
+  color:white;
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+.card:hover{
+  background-color:	aliceblue;
+}
