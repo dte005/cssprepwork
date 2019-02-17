@@ -100,6 +100,7 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -111,7 +112,7 @@ body{
 
 .navbar-middle .navbar-middle-left .navbar-middle-item a{
   font-family: Helvetica;
-  font-size: 20px;
+  font-size: 25px;
   padding: 30px;
   color: white;
   opacity: 0.5;

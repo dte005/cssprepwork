@@ -2,8 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <!--Para responsividade
-    <meta name="viewport" content="width=device-width, inital-scale=1">-->
+    <meta name="viewport" content="width=device-width, inital-scale=1">
     <title>Css notebook</title>
     <link rel="stylesheet" href="assets/css/css-style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
@@ -20,16 +19,16 @@
     <div class="navbar-middle">
       <div class="navbar-middle-left">
         <div class="navbar-middle-item-active">
-          <a href="#"><i class="fab fa-css3"></i></a>
+          <a href="#" onclick="myFunction()"><i class="fab fa-css3"></i></a>
         </div>
         <div class="navbar-middle-item">
-          <a href="#news">Topic 1</a>
+          <a href="#news" id="item1">CSS</a>
         </div>
         <div class="navbar-middle-item">
-          <a href="#contact">Topic 2</a>
+          <a href="#contact" id="item2">HTML</a>
         </div>
         <div class="navbar-middle-item">
-          <a href="#about">Topic 3</a>
+          <a href="#about" id="item3">JavaScript</a>
         </div>
       </div>
       <div class="navbar-middle-right">
@@ -38,6 +37,7 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="./assets/js/nav-bar.js"></script>
 
     <div class="content">
       <div class="content-box" style="margin:50px;">
@@ -59,7 +59,7 @@
         </div>
 
         <div class="content-cards">
-          <div class="card" style="width: 22rem;">
+          <div class="card" style="width: 22rem; margin:10px;">
             <img class="card-img-top" src="./assets/imgs/laptop.png" alt="Foto do perfil de curriculum">
             <div class="card-body">
               <h5 class="card-title">Visite meu site!</h5>
@@ -67,7 +67,7 @@
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
-          <div class="card" style="width: 22rem;">
+          <div class="card" style="width: 22rem; margin:10px;">
             <img class="card-img-top" src="./assets/imgs/briefcase.png" alt="Foto do perfil de curriculum">
             <div class="card-body">
               <h5 class="card-title">Visite meu site!</h5>
@@ -75,7 +75,7 @@
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
-          <div class="card" style="width: 22rem;">
+          <div class="card" style="width: 22rem; margin:10px;">
             <img class="card-img-top" src="./assets/imgs/diamond.png" alt="Foto do perfil de curriculum">
             <div class="card-body">
               <h5 class="card-title">Visite meu site!</h5>
