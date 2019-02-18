@@ -258,3 +258,84 @@ As cores podem afetar:
 **SASS
 São pré processadores para CSS os quais automatizam os comandos executados.
 Fazendo com que o Css não fique repetitivo.
+
+**Typography - Tipografia
+Para mudar o tipo de fonte no arquivo Css:
+  -> font-family: Helvetica(ou qualquer outra fonte);
+
+Para mudar o estilo da font:
+  ->font-weight: bold; normal;
+Podemos colocar valores para font-weight:
+    400 is the default font-weight of most text.
+    700 signifies a bold font-weight.
+    300 signifies a light font-weight.
+
+Para mudar o estilo da font:
+  -> font-style: italic;
+
+Para mudar o espaçamento em um texto entre as palavras:
+  -> word-spacing: 0.3em;
+
+Para mudar o espaçamento entre as letras:
+  ->letter-spacing: 0.3em;
+
+Para mudar o texto entre uppercase e lowercase:
+  -> text-transform: uppercase;
+
+Para mudar o alinhamento do texto:
+  ->text-align: right; center; left;
+
+  *Line Height:
+
+  The fastest cat
+  __________________  -           -
+                      |->leading  |
+  __________________  -           |->Line Height
+  can race at 75      |->Font size|
+  __________________  -           -
+
+  A height modifica o leading da palavra, ou seja, modifica o espaço entre as palavras
+  na linha vertical.
+
+  p{
+    line-height: 1.4;
+  }
+
+Para usar fallback fonts:
+  h1 {
+    font-family: "Garamond", "Times", serif;
+  }
+
+  Acima estão definindo Garamond como a fonta principal
+  Caso ela não esteja disponível utilize a Times
+  Caso também não esteja disponível utilize a serif, que está instalada no computador.
+
+  As fonts que veem depois de Garamond são consideradas fallbacks (Times and serif).
+
+Podemos linkar fontes externas diretamente no arquivo HTML através:
+<link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+e usar a fonte diretamente no arquivo Css
+
+Podemos também usar o @font-face diretamente no CSS:
+  @font-face {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Space Mono'), local('SpaceMono-Regular'), url(https://fonts.gstatic.com/s/spacemono/v4/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+através da API do google
+
+Podemos declarar nossos estilos de fontes ao invés de depender de fontes externas:
+  @font-face {
+    font-family: "Roboto";
+    src: url(fonts/Roboto.woff2) format('woff2'),
+         url(fonts/Roboto.woff) format('woff'),
+         url(fonts/Roboto.tff) format('truetype');
+  }
+
+******MEDIA TAGS
+Usados para diferenciar os tipos de medias que estão sendo usadas para mostrar o site.
+outro jeito de trabalhar com media css files.
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
